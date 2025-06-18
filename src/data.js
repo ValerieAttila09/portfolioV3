@@ -39,24 +39,28 @@ export const ProjectsData = [
     id: 1,
     projectTitle: "Portfolio V1",
     projectDescription: "This is my first Portfolio. Although the design is not very good and attractive, but it makes me proud.",
-    image: PortfolioV1
+    image: PortfolioV1,
+    link: "https://valerieattila09.github.io/portfolio/"
   },
   {
     id: 2,
     projectTitle: "School Project",
     projectDescription: "This is my school project entitled The Impact of Indonesia's Geograpghical Location In the form of a website.",
-    image: School
+    image: School,
+    link: "https://valerieattila09.github.io/dampakGeografisIndonesia/"
   },
   {
     id: 3,
     projectTitle: "ASUS ProArt Laptop",
     projectDescription: "At first i made this webiste because i was bored. I don't know i thought of making this website, but this one is pretty good",
-    image: Asus
+    image: Asus,
+    link: "https://valerieattila09.github.io/ProArt-Laptop/"
   },
   {
     id: 4,
     projectTitle: "Portfolio V2",
     projectDescription: "And here is my second portfolio website. From here i started to be proficient in using GSAP and i started intersted in website animations with GSAP.",
-    image: PortfolioV2
+    image: PortfolioV2,
+    link: "https://valerieattila09.github.io/portfolioV2/"
   },
 ]

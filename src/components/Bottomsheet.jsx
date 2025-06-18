@@ -30,7 +30,7 @@ const BottomSheet = () => {
 
         gsap.to(sheetRef.current, {
           y: snap,
-          duration: 0.3,
+          duration: 0.4,
           ease: "power2.out",
           onComplete: () => {
             setIsOpen(snap === openY);
@@ -89,8 +89,8 @@ const BottomSheet = () => {
       message: ''
     });
 
-    alert('Data berhasil disimpan ke localStorage!');
-    console.warn('Data berhasil disimpan ke localStorage!');
+    alert('Form sukses di kirim!');
+    console.warn('Form sukses di kirim!');
   };
 
   return (

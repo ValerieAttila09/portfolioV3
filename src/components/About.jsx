@@ -1,6 +1,10 @@
 import { ArrowDownIcon, ArrowDownTrayIcon, BarsArrowDownIcon, EnvelopeIcon, PhoneIcon, UserIcon } from "@heroicons/react/24/outline"
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Bug from "@mui/icons-material/BugReport"
+import UiUx from "@mui/icons-material/Architecture"
+import Desktop from "@mui/icons-material/DesignServices"
+import Database from "@mui/icons-material/DataArray"
 
 gsap.registerPlugin(useGSAP);
 
@@ -10,36 +14,29 @@ const skills = [
 		title: "UI/UX Design",
 		classes: ":w-full flex flex-col gap-[4rem] bg-black rounded-md p-5 border border-greyDark hover:shadow-xl hover:shadow-black hover:-translate-y-2 transition-all",
 		description: "I an expert in creating a website design, starting from e-commerce websites, portfolios, and others. i will help you if you need design assistance.",
-		icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="yellow" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 text-yellow-600">
-			<path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-		</svg>)
+		icon: (<UiUx className="text-lg text-purple-400" />)
 	},
 	{
 		id: 2,
 		classes: "w-full flex flex-col gap-[4rem] bg-black rounded-md p-5 border border-greyDark hover:shadow-xl hover:shadow-black hover:-translate-y-2 transition-all",
 		title: "Troubleshooting & Bugs",
 		description: "Address technical issues and systematically identify bugs to ensure the stability and optimal performance of the system.",
-		icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 text-red-600">
-			<path strokeLinecap="round" strokeLinejoin="round" d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0 1 12 12.75Zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 0 1-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 0 0 2.248-2.354M12 12.75a2.25 2.25 0 0 1-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 0 0-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 0 1 .4-2.253M12 8.25a2.25 2.25 0 0 0-2.248 2.146M12 8.25a2.25 2.25 0 0 1 2.248 2.146M8.683 5a6.032 6.032 0 0 1-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0 1 15.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 0 0-.575-1.752M4.921 6a24.048 24.048 0 0 0-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 0 1-5.223 1.082" />
-		</svg>)
+		icon: (<
+		Bug className="text-lg text-purple-400" />)
 	},
 	{
 		id: 3,
 		classes: "w-full flex flex-col gap-[4rem] bg-black rounded-md p-5 border border-greyDark hover:shadow-xl hover:shadow-black hover:-translate-y-2 transition-all",
 		title: "Creative & Visual Thinking",
 		description: "Developing original and aesthetic design concepts with a strategic visual approach to enhance appeal and user experience.",
-		icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="blue" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 text-blue-500">
-			<path strokeLinecap="round" strokeLinejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-		</svg>)
+		icon: (<Desktop className="text-lg text-purple-400" />)
 	},
 	{
 		id: 4,
 		classes: "w-full flex flex-col gap-[4rem] bg-black rounded-md p-5 border border-greyDark hover:shadow-xl hover:shadow-black hover:-translate-y-2 transition-all",
 		title: "Database Management",
 		description: "Managing the structure and integrity of data efficiently with a reliable database system to support the performance and scalability of applications.",
-		icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="yellow" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
-			<path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-		</svg>)
+		icon: (<Database className="text-lg text-purple-400" />)
 	}
 ]
 
@@ -153,18 +150,22 @@ export function About() {
 				<div className="w-full grid md:grid-cols-2 gap-5 px-6 md:ps-6 md:pe-[4rem]">
 
 					{skills.map((skill) => (
-						<div className="hover:-translate-y-2 hover:shadow-2xl transition-all shadow-lg shadow-black w-full h-[14rem] md:mx-auto rounded-2xl p-[1px] overflow-hidden bg-gradient-to-br from-greyLight via-dark to-dark">
+						<div className="hover:-translate-y-2 hover:shadow-2xl transition-all shadow-lg shadow-black w-full h-[16rem] md:mx-auto rounded-2xl p-[1px] overflow-hidden bg-gradient-to-br from-greyLight via-dark to-dark">
 							<div className="overflow-hidden w-full h-full p-5 bg-gradient-to-br from-greyDark to-dark rounded-2xl flex flex-col gap-2">
 
 								<div className="w-full flex justify-between items-center gap-5">
-									<h1 className="text-4xl text-light inter-semibold">{skill.title}</h1>
-									{skill.icon}
+									<div className="w-2/3">
+										<h1 className="text-4xl text-light inter-regular">{skill.title}</h1>
+									</div>
+									<div className="1/3 flex justify-center items-center">
+										{skill.icon}
+									</div>
 								</div>
 
 								<div className="w-full h-full flex flex-col justify-end">
 									<p className="text-md text-secondaryLight">{skill.description}</p>
 								</div>
-								
+
 							</div>
 						</div>
 					))}

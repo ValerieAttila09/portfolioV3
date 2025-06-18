@@ -22,14 +22,19 @@ export function Projects() {
 						return (
 							<div className="md:w-full mx-auto md:mx-0 h-auto rounded-lg bg-white hover:shadow-xl transition-all">
 								<div className="w-full h-full grid gap-2">
-									<div className="h-7/10 w-full p-2">
+									<div className="h-4/9 w-full p-2">
 										<div className="rounded-md overflow-hidden">
 											<img src={project.image} className="projectImage h-[18rem] w-full object-cover brightness-75 saturate-50 hover:saturate-100 hover:brightness-100 transition-all" alt="" />
 										</div>
 									</div>
-									<div className="h-3/10 w-full p-4">
+									<div className="h-3/9 w-full p-4">
 										<h1 className="projectTitle text-4xl md:text-3xl inter-bold text-dark">{project.projectTitle}</h1>
 										<span className="projectDescription text-md text-greyDark">{project.projectDescription}</span>
+									</div>
+									<div className="w-full h-2/9 p-4">
+										<a href={project.link}>
+											<button className="text-md text-light bg-dark rounded-full px-4 py-2 hover:bg-greyLight transition-all">View project</button>
+										</a>
 									</div>
 								</div>
 							</div>
