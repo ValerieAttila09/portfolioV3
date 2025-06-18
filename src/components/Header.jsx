@@ -11,7 +11,7 @@ const handleAnimationComplete = () => {
 
 const Text = () => {
 	return (
-		<h1 className='text-6xl md:text-7xl pt-sans-bold text-wrap text-start'>
+		<h1 className='flex text-6xl pt-sans-bold text-wrap text-start'>
 			<span>WEB DESIGNER</span>
 			<span> & </span>
 			<span>DEVELOPER</span>
@@ -36,7 +36,7 @@ export function Header() {
 
 	return (
 		<>
-			<div className='md:flex md:gap-[6rem] md:my-10'>
+			<div className='md:my-[9rem] lg:flex lg:gap-[6rem] lg:my-10'>
 				<div className="w-full h-[26rem] md:h-[36rem] flex flex-col gfap-5 p-4">
 					<div className="w-full h-1/2 flex items-end">
 						<div className="flex flex-col items-start justify-center gap-2">
