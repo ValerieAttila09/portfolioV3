@@ -19,9 +19,9 @@ const BottomSheet = () => {
 
     Draggable.create(sheetRef.current, {
       type: "y",
-      bounds: { 
-        minY: openY, 
-        maxY: closedY 
+      bounds: {
+        minY: openY,
+        maxY: closedY
       },
       inertia: true,
       onDragEnd: function () {
@@ -50,6 +50,49 @@ const BottomSheet = () => {
     setIsOpen(!isOpen);
   };
 
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    gender: '',
+    graduate: '',
+    email: '',
+    message: ''
+  });
+
+  // Handle input form
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  // Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Ambil data lama dari localStorage (kalau ada)
+    const existingData = JSON.parse(localStorage.getItem('formData')) || [];
+
+    // Tambahkan data baru
+    const updatedData = [...existingData, formData];
+
+    // Simpan kembali ke localStorage
+    localStorage.setItem('formData', JSON.stringify(updatedData));
+
+    // Optional: Reset form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      gender: '',
+      graduate: '',
+      email: '',
+      message: ''
+    });
+
+    alert('Data berhasil disimpan ke localStorage!');
+    console.warn('Data berhasil disimpan ke localStorage!');
+  };
+
   return (
     <>
       <button onClick={toggleSheet} className="rounded-full bg-dark px-5 py-2 hover:bg-greyLight transition-all">
@@ -63,18 +106,18 @@ const BottomSheet = () => {
           </div>
           <div className="contact-content py-2 relative">
             <div className="w-full h-full">
-              <form className="w-full grid gap-2 py-2 px-1 md:px-[2rem] md:gap-3" action="">
+              <form onSubmit={handleSubmit} className="w-full grid gap-2 py-2 px-1 md:px-[2rem] md:gap-3" action="">
                 <div className="flex flex-col md:flex-row gap-2">
                   <div className="md:w-full flex flex-col">
                     <label htmlFor="firstName" className="bg-secondaryLight text-md border border-transparent focus:outline-2 focus:border-violet-300 focus:outline-violet-300 focus:outline-offset-1 transition-all rounded-md flex flex-col px-1 py-[2px]">
                       <span className="text-sm text-greyLight">First Name</span>
-                      <input required type="text" name="firstName" className="outline-none" />
+                      <input value={formData.firstName} onChange={handleChange} required type="text" name="firstName" className="outline-none" />
                     </label>
                   </div>
                   <div className="md:w-full flex flex-col">
                     <label htmlFor="lastName" className="bg-secondaryLight text-md border border-transparent focus:outline-2 focus:border-violet-300 focus:outline-violet-300 focus:outline-offset-1 transition-all rounded-md flex flex-col px-1 py-[2px]">
                       <span className="text-sm text-greyLight">Last Name</span>
-                      <input required type="text" name="lastName" className="outline-none" />
+                      <input value={formData.lastName} onChange={handleChange} required type="text" name="lastName" className="outline-none" />
                     </label>
                   </div>
                 </div>
@@ -82,7 +125,7 @@ const BottomSheet = () => {
                   <div className="w-1/2">
                     <label htmlFor="gender" className="bg-secondaryLight text-md border border-transparent focus:outline-2 focus:border-violet-300 focus:outline-violet-300 focus:outline-offset-1 transition-all rounded-md flex flex-col px-1 py-[2px]">
                       <span className="text-sm text-greyLight">Gender</span>
-                      <select required name="graduate" id="graduate" className="outline-none transition-all">
+                      <select value={formData.gender} onChange={handleChange} required name="graduate" id="graduate" className="outline-none transition-all">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                       </select>
@@ -91,7 +134,7 @@ const BottomSheet = () => {
                   <div className="w-1/2">
                     <label htmlFor="graduate" className="bg-secondaryLight text-md border border-transparent focus:outline-2 focus:border-violet-300 focus:outline-violet-300 focus:outline-offset-1 transition-all rounded-md flex flex-col px-1 py-[2px]">
                       <span className="text-sm text-greyLight">Graduate</span>
-                      <select required name="graduate" id="graduate" className="outline-none transition-all">
+                      <select value={formData.graduate} onChange={handleChange} required name="graduate" id="graduate" className="outline-none transition-all">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                       </select>
@@ -102,14 +145,14 @@ const BottomSheet = () => {
                   <div className="flex flex-col">
                     <label htmlFor="email" className="bg-secondaryLight text-md border border-transparent focus:outline-2 focus:border-violet-300 focus:outline-violet-300 focus:outline-offset-1 transition-all rounded-md flex flex-col px-1 py-[2px]">
                       <span className="text-sm text-greyLight">Email</span>
-                      <input required type="email" name="email" className="outline-none" />
+                      <input value={formData.email} onChange={handleChange} required type="email" name="email" className="outline-none" />
                     </label>
                   </div>
                 </div>
                 <div className="w-full">
                   <label htmlFor="message" className="bg-secondaryLight text-md border border-transparent focus:outline-2 focus:border-violet-300 focus:outline-violet-300 focus:outline-offset-1 transition-all rounded-md flex flex-col px-1 py-[2px]">
                     <span className="text-sm text-greyLight">Message</span>
-                    <textarea required name="message" className="outline-none" />
+                    <textarea value={formData.message} onChange={handleChange} required name="message" className="outline-none" />
                   </label>
                 </div>
                 <div className="w-full">

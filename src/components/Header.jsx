@@ -11,7 +11,7 @@ const handleAnimationComplete = () => {
 
 const Text = () => {
 	return (
-		<h1 className='flex flex-wrap text-6xl pt-sans-bold text-wrap text-start'>WEB DESIGNER & DEVELOPER</h1>
+		<h1 className='text-6xl pt-sans-bold text-wrap text-start'>WEB DESIGNER & DEVELOPER</h1>
 	)
 }
 

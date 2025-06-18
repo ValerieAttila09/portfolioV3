@@ -3,6 +3,8 @@ import { Draggable } from "gsap/Draggable"
 import { useGSAP } from '@gsap/react';
 import BottomSheet from "./Bottomsheet";
 
+
+
 export function Contact() {
   gsap.registerPlugin(Draggable)
   gsap.registerPlugin(useGSAP)
@@ -11,6 +13,9 @@ export function Contact() {
 
   })
 
+
+
+  
   return (
     <div className="w-full h-auto pt-[4rem] pb-[8rem] flex flex-col gap-5 p-3">
       <div className="flex flex-col gap-3">

@@ -20,7 +20,11 @@
     "@react-three/postprocessing": "^3.0.4",
     "@react-three/rapier": "^2.1.0",
     "@tailwindcss/vite": "^4.1.8",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "framer-motion": "^12.18.1",
+    "fs": "^0.0.1-security",
     "gh-pages": "^6.3.0",
     "gl-matrix": "^3.4.3",
     "gsap": "^3.13.0",
@@ -45,5 +49,17 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "vite": "^6.3.5"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValerieAttila09/portfolioV3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValerieAttila09/portfolioV3/issues"
   }
 }
