@@ -145,7 +145,7 @@ const BottomSheet = () => {
                   <div className="flex flex-col">
                     <label htmlFor="email" className="bg-secondaryLight text-md border border-transparent focus:outline-2 focus:border-violet-300 focus:outline-violet-300 focus:outline-offset-1 transition-all rounded-md flex flex-col px-1 py-[2px]">
                       <span className="text-sm text-greyLight">Email</span>
-                      <input value={formData.email} onChange={handleChange} required type="email" name="email" className="outline-none" />
+                      <input placeholder="name@email.example" value={formData.email} onChange={handleChange} required type="email" name="email" className="outline-none" />
                     </label>
                   </div>
                 </div>

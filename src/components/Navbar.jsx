@@ -35,7 +35,6 @@ export function NavbarDesktop() {
 				ease: 'power2.inOut',
 				onStart: () => {
 					document.querySelector(".menuIcon").classList.add("text-light")
-					document.querySelector(".userIcon").classList.add("text-light")
 					gsap.to("#navbar", {
 						background: "transparent",
 						duration: 0.4,
@@ -69,7 +68,6 @@ export function NavbarDesktop() {
 				ease: 'power2.inOut',
 				onStart: () => {
 					document.querySelector(".menuIcon").classList.remove("text-light")
-					document.querySelector(".userIcon").classList.remove("text-light")
 					gsap.to("#navbar", {
 						background: "#f7f7f7",
 						duration: 0.4,

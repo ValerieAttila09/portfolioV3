@@ -7,7 +7,7 @@ gsap.registerPlugin(useGSAP)
 
 const Text = () => {
 	return (
-		<h1 className='text-6xl pt-sans-bold text-start'>WEB DESIGNER & DEVELOPER</h1>
+		<h1 className='text-5xl md:text-6xl pt-sans-bold text-start'>WEB DESIGNER & DEVELOPER</h1>
 	)
 }
 
