@@ -10,7 +10,7 @@ import { ScrollAnimation } from './components/ScrollAnimation'
 const App = () => {
 
 	return (
-		<div className="w-full bg-secondaryLight">
+		<div className="w-full bg-secondaryLight overflow-hidden">
 			<Entrance/>
 
 			{/* Navbar */}
