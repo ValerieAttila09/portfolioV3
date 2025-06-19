@@ -5,6 +5,7 @@ import { Projects } from "./components/Projects"
 import { Contact } from './components/Contact'
 import { Footer } from "./components/Footer"
 import { Entrance } from './components/Entrance'
+import { ScrollAnimation } from './components/ScrollAnimation'
 
 const App = () => {
 
@@ -22,6 +23,11 @@ const App = () => {
 			{/* Header */}
 			<div id='home' className='md:px-[4rem]'>
 				<Header />
+			
+			</div>
+			{/* Animation */}
+			<div id='animation'>
+				<ScrollAnimation />
 			</div>
 
 			{/* About */}

@@ -1,9 +1,8 @@
 import { gsap } from "gsap"
 import { Draggable } from "gsap/Draggable"
-import { useGSAP } from '@gsap/react';
-import BottomSheet from "./Bottomsheet";
-import React, { useRef, useState } from "react";
-import EmailIcon from "@mui/icons-material/Mail"
+import { useGSAP } from '@gsap/react'
+import BottomSheet from "./Bottomsheet"
+import React, { useState } from "react"
 
 
 

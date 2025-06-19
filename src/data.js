@@ -1,5 +1,5 @@
 import viteLogo from './assets/images/Vitejs-logo.svg.png';
-import reactLogo from './assets/images/reactjs.svg';
+import reactLogo from './assets/images/React-icon.svg.png';
 import tailwindLogo from './assets/images/Tailwind_CSS_Logo.svg.png';
 import gsapLogo from './assets/images/gsap-greensock.svg';
 import PortfolioV1 from "./assets/images/portfolioV1.png"
