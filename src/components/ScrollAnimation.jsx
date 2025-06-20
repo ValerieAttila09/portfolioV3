@@ -35,11 +35,7 @@ export function ScrollAnimation() {
 
     // const begin = master.add(TimeLine())
 
-    let sections = gsap.utils.toArray(".panel")
-
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
+    let master = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
         pin: true,
@@ -48,26 +44,56 @@ export function ScrollAnimation() {
       }
     })
 
+    let sections = gsap.utils.toArray(".panel")
+
+    function TimeLine() {
+      return gsap.timeline().to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+      }).to(".title", {
+        xPercent: -25 * (sections.length - 1),
+        ease: "none"
+      }, "-=0.5")
+    }
+
+    let begin = master.add(TimeLine())
+
+
   });
 
   return (
-    <div ref={containerRef} className="container w-auto h-full flex flex-nowrap relative">
-      {/* <div className="relative w-full h-[100vh] bg-transparent">
-        <div ref={box1Ref} className="absolute top-0 left-0 w-[0px] h-[100px] bg-blue-500"></div>
-        <div ref={box2Ref} className="absolute z-2 top-[30px] left-0 w-[0px] h-full bg-red-500"></div>
-      </div> */}
+    <div ref={containerRef} className="container bg-secondaryLight w-full h-full flex flex-nowrap relative">
+      <div className="absolute z-5 inset-0 bg-transparent">
+        <div className="w-full h-full relative flex justify-start items-center">
+          <h1 className='title absolute z-8 text-start text-5xl md:text-6xl lg:text-7xl inter-bold text-shadow-md text-nowrap'>
+            <span>"Programming isn't about what you know, it's about what you can figure out."</span>
+          </h1>
+        </div>
+      </div>
 
-      <div className="panel flex flex-justify-center items-center bg-transparent min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/10 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/20 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/30 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/40 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/50 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/60 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/70 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/80 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark/90 min-w-[100vw] h-[100vh]"></div>
-      <div className="panel flex flex-justify-center items-center bg-dark min-w-[100vw] h-[100vh]"></div>
+      <div className="panel min-w-[100vw] h-[100vh] relative bg-secondaryLight">
+        <div className="w-full h-full relative flex justify-center items-center">
+
+        </div>
+      </div>
+      <div className="panel min-w-[100vw] h-[100vh] relative bg-secondaryLight">
+        <div className="w-full h-full relative flex justify-center items-center">
+
+        </div>
+      </div>
+      <div className="panel min-w-[100vw] h-[100vh] relative bg-secondaryLight">
+        <div className="w-full h-full relative flex justify-center items-center">
+
+        </div>
+      </div>
+      <div className="panel min-w-[100vw] h-[100vh] relative bg-secondaryLight">
+        <div className="w-full h-full relative flex justify-center items-end">
+          <div className="w-full h-1/2 px-4 md:px-8 flex flex-col justify-center items-start">
+            <span className='text-2xl text-shadow-sm text-greyDark inter-semibold'>— Chris Pine</span>
+          </div>
+        </div>
+      </div>
+
 
     </div>
   );
