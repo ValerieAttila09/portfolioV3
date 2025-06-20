@@ -21,8 +21,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="w-full h-[48rem] md:h-[40rem] bg-dark rounded-tr-2xl rounded-tl-2xl">
-          <div className="w-full h-full flex flex-col md:flex-row justify-end md:justify-center items-center gap-[5rem] p-[2rem] md:py-[5rem] md:px-[8rem]">
+        <div className="w-full h-auto bg-dark rounded-tr-2xl rounded-tl-2xl">
+          <div className="pt-[12rem] md:pt-[20rem] w-full h-full flex flex-col md:flex-row justify-end md:justify-center items-center gap-[5rem] p-[2rem] md:py-[5rem] md:px-[8rem]">
             <div className="w-full md:w-1/2">
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-2">

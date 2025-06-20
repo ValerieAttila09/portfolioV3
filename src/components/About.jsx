@@ -1,10 +1,13 @@
-import { ArrowDownIcon, ArrowDownTrayIcon, BarsArrowDownIcon, EnvelopeIcon, PhoneIcon, UserIcon } from "@heroicons/react/24/outline"
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { BarsArrowDownIcon } from "@heroicons/react/24/outline"
+import PhoneIcon from "@mui/icons-material/Call"
+import MailIcon from "@mui/icons-material/Mail"
+import UserIcon from "@mui/icons-material/Person"
 import Bug from "@mui/icons-material/BugReport"
 import UiUx from "@mui/icons-material/Architecture"
 import Desktop from "@mui/icons-material/DesignServices"
 import Database from "@mui/icons-material/DataArray"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
 
 gsap.registerPlugin(useGSAP);
 
@@ -21,8 +24,7 @@ const skills = [
 		classes: "w-full flex flex-col gap-[4rem] bg-black rounded-md p-5 border border-greyDark hover:shadow-xl hover:shadow-black hover:-translate-y-2 transition-all",
 		title: "Troubleshooting & Bugs",
 		description: "Address technical issues and systematically identify bugs to ensure the stability and optimal performance of the system.",
-		icon: (<
-		Bug className="text-lg text-purple-400" />)
+		icon: (<Bug className="text-lg text-purple-400" />)
 	},
 	{
 		id: 3,
@@ -58,7 +60,7 @@ export function About() {
 					</span>
 					<div className="w-full flex justify-start items-center gap-4 my-4">
 						<div className="size-10 hover:bg-greyDark hover:shadow-xl transition-all bg-dark rounded-full flex justify-center items-center">
-							<EnvelopeIcon className="size-6 text-light" />
+							<MailIcon className="size-6 text-light" />
 						</div>
 						<div className="size-10 hover:bg-greyDark hover:shadow-xl transition-all bg-dark rounded-full flex justify-center items-center">
 							<PhoneIcon className="size-5 text-light" />

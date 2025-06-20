@@ -60,7 +60,7 @@ export function Contact() {
 
 
   return (
-    <div className="w-full lg:flex-row h-auto pt-[4rem] pb-[8rem] flex flex-col gap-5 p-3">
+    <div className="w-full lg:flex-row h-auto pt-[4rem] pb-[8rem] flex flex-col gap-5 lg:gap-[2.6rem] p-3">
       <div className="flex flex-col gap-3">
         <div className="flex flex-col">
           <h1 className="text-5xl md:text-6xl text-dark pt-sans-bold">Reach Out</h1>

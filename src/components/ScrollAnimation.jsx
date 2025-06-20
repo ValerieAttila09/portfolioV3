@@ -5,9 +5,7 @@ import { useRef } from 'react';
 
 export function ScrollAnimation() {
   const containerRef = useRef(null);
-  const box1Ref = useRef(null)
-  const box2Ref = useRef(null)
-
+  
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
 
@@ -46,12 +44,16 @@ export function ScrollAnimation() {
 
     let sections = gsap.utils.toArray(".panel")
 
+    gsap.set(".title", {
+      xPercent: 60,
+    })
+
     function TimeLine() {
       return gsap.timeline().to(sections, {
-        xPercent: -100 * (sections.length - 1),
+        xPercent: -100 * 2 * (sections.length - 1),
         ease: "none",
       }).to(".title", {
-        xPercent: -25 * (sections.length - 1),
+        xPercent: -80 * (sections.length - 1),
         ease: "none"
       }, "-=0.5")
     }
@@ -77,22 +79,14 @@ export function ScrollAnimation() {
         </div>
       </div>
       <div className="panel min-w-[100vw] h-[100vh] relative bg-secondaryLight">
-        <div className="w-full h-full relative flex justify-center items-center">
-
-        </div>
-      </div>
-      <div className="panel min-w-[100vw] h-[100vh] relative bg-secondaryLight">
-        <div className="w-full h-full relative flex justify-center items-center">
-
-        </div>
-      </div>
-      <div className="panel min-w-[100vw] h-[100vh] relative bg-secondaryLight">
-        <div className="w-full h-full relative flex justify-center items-end">
+        <div className="w-full h-full relative flex flex justify-center items-end">
           <div className="w-full h-1/2 px-4 md:px-8 flex flex-col justify-center items-start">
             <span className='text-2xl text-shadow-sm text-greyDark inter-semibold'>— Chris Pine</span>
           </div>
         </div>
       </div>
+      
+
 
 
     </div>
